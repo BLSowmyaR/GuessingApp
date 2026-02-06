@@ -12,20 +12,18 @@ public class GuessingApp {
 
         Scanner scanner = new Scanner(System.in);
         int userGuess = 0;
-        int attempts = 0;
 
         while (userGuess != targetNumber) {
             System.out.print("Enter your guess: ");
             userGuess = scanner.nextInt();
-            attempts++;
 
             if (userGuess < targetNumber) {
-                System.out.println("Too low!");
+                System.out.println("Too low! Try again.");
             } else if (userGuess > targetNumber) {
-                System.out.println("Too high!");
+                System.out.println("Too high! Try again.");
             }
         }
 
-        System.out.println("🎉 Correct! Attempts taken: " + attempts);
+        System.out.println("🎉 Congratulations! You guessed the number.");
     }
 }
